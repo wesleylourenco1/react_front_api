@@ -1,0 +1,6 @@
+# .env
+VITE_API_URL=http://localhost:8000/api
+VITE_LOGIN_ROUTE=/user/login
+VITE_LOGOUT_ROUTE=/user/logout
+VITE_REGISTER_ROUTE=/user/register
+VITE_PROFILE_ROUTE=/user/profile
