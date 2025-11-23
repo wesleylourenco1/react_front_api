@@ -1,16 +1,66 @@
-# React + Vite
+# React Frontend para API Laravel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend React + Vite para consumir APIs Laravel, com autenticação JWT, gerenciamento de rotas via Context API e Tailwind CSS. Layout moderno de login, proteção de rotas e base pronta para novos projetos.
 
-Currently, two official plugins are available:
+## Tecnologias
+- React 18 + Vite
+- Tailwind CSS
+- React Context API
+- React Router DOM
+- JWT (localStorage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Funcionalidades
+- Login e logout com JWT
+- Proteção de rotas
+- Layout responsivo
+- Configuração de rotas via `.env`
 
-## React Compiler
+## Estrutura
+src/
+├─ context/ # AuthContext
+├─ pages/ # Login, Home, etc.
+├─ routes/ # apiRoutes.js
+├─ App.jsx
+.env.example # Variáveis de ambiente
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+markdown
+Copiar código
 
-## Expanding the ESLint configuration
+## Variáveis de ambiente
+Crie `.env` baseado em `.env.example`:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+VITE_API_URL=http://localhost:8000/api
+VITE_LOGIN_ROUTE=/user/login
+VITE_LOGOUT_ROUTE=/user/logout
+VITE_REGISTER_ROUTE=/user/register
+VITE_PROFILE_ROUTE=/user/profile
+
+go
+Copiar código
+
+> Nunca suba o `.env` real. Use `.env.example` como referência.
+
+## Executar localmente
+```bash
+npm install
+npm run dev
+Abra no navegador: http://localhost:5173
+
+Observações
+Base pronta para expandir funcionalidades e páginas
+
+Fácil adaptação para novos projetos
+
+Mantém boas práticas de autenticação e rotas protegidas
+
+yaml
+Copiar código
+
+---
+
+Agora, para enviar **tudo para o GitHub**:
+
+```bash
+git add .
+git commit -m "Adiciona projeto React + AuthContext + README"
+git push -u origin main
